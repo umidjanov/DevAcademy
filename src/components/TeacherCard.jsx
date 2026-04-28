@@ -1,51 +1,69 @@
+import TeacherAvatar from "./TeacherAvatar";
+
 export default function TeacherCard({ teacher }) {
   return (
-    <div className="group bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-green-50 hover:-translate-y-2 transition-all duration-300">
+    <div className="group bg-white border border-gray-100 rounded-2xl p-5 hover:border-green-200 hover:shadow-xl hover:shadow-green-50 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col items-center text-center">
       {/* Avatar */}
-      <div
-        className="h-48 flex items-center justify-center relative overflow-hidden"
-        style={{ background: teacher.bg }}
-      >
-        <span className="text-6xl group-hover:scale-110 transition-transform duration-300">
-          {teacher.emoji}
-        </span>
-        {/* Rating badge */}
-        <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-2.5 py-1 flex items-center gap-1 text-xs font-bold shadow-sm">
-          <span className="text-amber-400">★</span>
-          <span className="text-gray-800">{teacher.rating}</span>
-        </div>
+      <div className="mb-4 transition-transform duration-300 group-hover:scale-105">
+        <TeacherAvatar teacher={teacher} size={80} />
       </div>
 
-      {/* Info */}
-      <div className="p-5">
-        <h3 className="text-base font-bold text-gray-900 mb-0.5">{teacher.name}</h3>
-        <p className="text-sm text-green-600 font-semibold mb-1">{teacher.field}</p>
+      {/* Name */}
+      <h4 className="text-base font-bold text-gray-900 mb-0.5 group-hover:text-green-700 transition-colors">
+        {teacher.name}
+      </h4>
 
-        <div className="flex items-center gap-1.5 text-xs text-gray-400 mb-4">
-          <span className="w-1 h-1 rounded-full bg-green-300 inline-block" />
-          <span>{teacher.exp}</span>
-          <span className="mx-1 text-gray-200">•</span>
-          <span>{teacher.company}</span>
+      {/* Field */}
+      <p className="text-xs font-semibold text-green-600 mb-1">
+        {teacher.field}
+      </p>
+
+      {/* Company */}
+      <p className="text-xs text-gray-400 mb-4">
+        {teacher.company} · {teacher.exp}
+      </p>
+
+      {/* Stats */}
+      <div className="flex items-center gap-3 w-full justify-center border-t border-gray-50 pt-4">
+        <div className="flex items-center gap-1.5">
+          <svg
+            width="13"
+            height="13"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#9ca3af"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          </svg>
+          <span className="text-xs text-gray-400 font-medium">
+            {teacher.students.toLocaleString()}
+          </span>
         </div>
 
-        {/* Students */}
-        <div className="flex items-center justify-between border-t border-gray-50 pt-4">
-          <div>
-            <p className="text-xs text-gray-400">Talabalar</p>
-            <p className="text-sm font-bold text-gray-800">
-              {teacher.students.toLocaleString()}+
-            </p>
-          </div>
-          <div className="flex gap-2">
-            {["🐦", "💼", "📘"].map((icon, i) => (
-              <button
-                key={i}
-                className="w-8 h-8 rounded-lg bg-gray-50 hover:bg-green-50 flex items-center justify-center text-sm transition-colors border border-gray-100 hover:border-green-200"
-              >
-                {icon}
-              </button>
-            ))}
-          </div>
+        <span className="text-gray-200">|</span>
+
+        <div className="flex items-center gap-1">
+          <svg
+            width="13"
+            height="13"
+            viewBox="0 0 24 24"
+            fill="#facc15"
+            stroke="#facc15"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+          </svg>
+          <span className="text-xs font-bold text-gray-700">
+            {teacher.rating}
+          </span>
         </div>
       </div>
     </div>

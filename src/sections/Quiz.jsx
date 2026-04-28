@@ -3,21 +3,22 @@ import SectionHeader from "../components/SectionHeader";
 import { quizQuestions, quizResults } from "../data/quiz";
 
 function QuizResult({ result, onRestart }) {
+  const IconComponent = result.icon;
+
   return (
     <div className="text-center py-10 px-6 sm:px-12">
+      {/* Icon */}
       <div
-        className="w-24 h-24 rounded-3xl flex items-center justify-center text-5xl mx-auto mb-6 shadow-inner"
+        className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-inner"
         style={{ background: result.bgColor }}
       >
-        {result.icon}
+        <IconComponent color={result.strokeColor} size={42} />
       </div>
+
       <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
         Sizga mos yo'nalish
       </p>
-      <h3
-        className="text-3xl font-black mb-4"
-        style={{ color: result.color }}
-      >
+      <h3 className="text-3xl font-black mb-4" style={{ color: result.color }}>
         {result.direction}
       </h3>
       <p className="text-gray-500 text-sm leading-relaxed max-w-md mx-auto mb-6">
@@ -68,7 +69,6 @@ export default function Quiz() {
     if (step < quizQuestions.length - 1) {
       setStep((s) => s + 1);
     } else {
-      // Count answers
       const counts = {};
       Object.values(answers).forEach((v) => {
         counts[v] = (counts[v] || 0) + 1;
@@ -90,13 +90,13 @@ export default function Quiz() {
   }
 
   const currentQ = quizQuestions[step];
-  const progress = ((step) / quizQuestions.length) * 100;
+  const progress = (step / quizQuestions.length) * 100;
 
   return (
     <section id="quiz" className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
         <SectionHeader
-          tag="🎯 Test"
+          tag="O'zingizni sinab ko'ring"
           title="IT yo'nalishingizni toping"
           subtitle="8 ta savol orqali siz uchun eng mos IT kasb yo'nalishini aniqlaymiz"
         />
@@ -106,7 +106,6 @@ export default function Quiz() {
             {/* Header progress */}
             {!isDone && (
               <div className="bg-gradient-to-r from-green-700 via-green-600 to-emerald-500 p-7 text-white">
-                {/* Dots */}
                 <div className="flex gap-2 mb-5">
                   {quizQuestions.map((_, i) => (
                     <div
@@ -115,13 +114,12 @@ export default function Quiz() {
                         i < step
                           ? "bg-white"
                           : i === step
-                          ? "bg-white/80"
-                          : "bg-white/25"
+                            ? "bg-white/80"
+                            : "bg-white/25"
                       }`}
                     />
                   ))}
                 </div>
-                {/* Progress bar */}
                 <div className="h-0.5 bg-white/20 rounded-full mb-5 overflow-hidden">
                   <div
                     className="h-full bg-white rounded-full transition-all duration-500"
@@ -194,7 +192,8 @@ export default function Quiz() {
                     ← Orqaga
                   </button>
                   <span className="text-xs text-gray-300 font-medium">
-                    {Object.keys(answers).length} / {quizQuestions.length} javoblandi
+                    {Object.keys(answers).length} / {quizQuestions.length}{" "}
+                    javoblandi
                   </span>
                   <button
                     onClick={goNext}
@@ -205,7 +204,9 @@ export default function Quiz() {
                         : "bg-gray-100 text-gray-300 cursor-not-allowed"
                     }`}
                   >
-                    {step === quizQuestions.length - 1 ? "Natijani ko'rish" : "Keyingi →"}
+                    {step === quizQuestions.length - 1
+                      ? "Natijani ko'rish"
+                      : "Keyingi →"}
                   </button>
                 </div>
               </>

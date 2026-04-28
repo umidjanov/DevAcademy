@@ -7,7 +7,7 @@ export default function Courses() {
     <section id="courses" className="py-24 bg-gray-50">
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
         <SectionHeader
-          tag="📚 IT Kurslar"
+          tag="IT Kurslar"
           title="Kasbingizni tanlang"
           subtitle="Har bir yo'nalish real loyihalar va amaliy tajriba asosida o'qitiladi. Sertifikat kafolatlanadi."
         />
@@ -21,7 +21,7 @@ export default function Courses() {
         <div className="text-center mt-12">
           <a
             href="#"
-            className="inline-flex items-center gap-2 bg-white border-2 border-green-200 text-green-700 font-bold px-8 py-3.5 rounded-xl hover:bg-green-50 hover:border-green-300 transition-all duration-200 text-sm"
+            className="inline-flex items-center gap-2 bg-white border-2 border-green-400 text-green-700 font-bold px-8 py-3.5 rounded-xl hover:bg-green-50 hover:border-green-300 transition-all duration-200 text-sm"
           >
             Barcha kurslarni ko'rish
             <span>→</span>

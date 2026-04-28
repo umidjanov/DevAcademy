@@ -1,7 +1,16 @@
+import {
+  FrontendIcon,
+  BackendIcon,
+  MobileIcon,
+  AIIcon,
+  DataScienceIcon,
+  DevOpsIcon,
+} from "../components/CourseIcons";
+
 export const courses = [
   {
     id: 1,
-    icon: "🎨",
+    icon: FrontendIcon,
     name: "Frontend Development",
     desc: "HTML, CSS, JavaScript, React — zamonaviy va interaktiv veb-interfeyslar yaratishni o'rganing.",
     students: "2,840",
@@ -9,10 +18,11 @@ export const courses = [
     level: "Boshlang'ich",
     tag: "Mashhur",
     accent: "#dcfce7",
+    strokeColor: "#166534",
   },
   {
     id: 2,
-    icon: "⚙️",
+    icon: BackendIcon,
     name: "Backend Development",
     desc: "Node.js, Python, Django, PostgreSQL — server arxitekturasi va kuchli API yaratish.",
     students: "1,920",
@@ -20,10 +30,11 @@ export const courses = [
     level: "O'rta",
     tag: "",
     accent: "#dbeafe",
+    strokeColor: "#1e40af",
   },
   {
     id: 3,
-    icon: "📱",
+    icon: MobileIcon,
     name: "Mobile Development",
     desc: "React Native va Flutter — iOS va Android ilovalarini bitta kod bazasidan yarating.",
     students: "1,540",
@@ -31,10 +42,11 @@ export const courses = [
     level: "O'rta",
     tag: "Yangi",
     accent: "#f3e8ff",
+    strokeColor: "#7e22ce",
   },
   {
     id: 4,
-    icon: "🤖",
+    icon: AIIcon,
     name: "Sun'iy Intellekt",
     desc: "Machine Learning, Deep Learning, Python — AI modellarini yaratish va o'qitish.",
     students: "980",
@@ -42,10 +54,11 @@ export const courses = [
     level: "Yuqori",
     tag: "Trend",
     accent: "#fef9c3",
+    strokeColor: "#854d0e",
   },
   {
     id: 5,
-    icon: "📊",
+    icon: DataScienceIcon,
     name: "Data Science",
     desc: "Ma'lumotlarni tahlil qilish, vizualizatsiya, Pandas, NumPy, Matplotlib.",
     students: "1,120",
@@ -53,10 +66,11 @@ export const courses = [
     level: "O'rta",
     tag: "",
     accent: "#ccfbf1",
+    strokeColor: "#0f766e",
   },
   {
     id: 6,
-    icon: "🚀",
+    icon: DevOpsIcon,
     name: "DevOps",
     desc: "Docker, Kubernetes, CI/CD, Linux — infratuzilmani avtomatlashtirish.",
     students: "760",
@@ -64,5 +78,6 @@ export const courses = [
     level: "Yuqori",
     tag: "",
     accent: "#ffe4e6",
+    strokeColor: "#9f1239",
   },
 ];

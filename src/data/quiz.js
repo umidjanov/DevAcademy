@@ -1,3 +1,12 @@
+import {
+  FrontendIcon,
+  BackendIcon,
+  MobileIcon,
+  DataIcon,
+  AIIcon,
+  DevOpsIcon,
+} from "../components/CourseIcons";
+
 export const quizQuestions = [
   {
     id: 1,
@@ -84,67 +93,61 @@ export const quizQuestions = [
 export const quizResults = {
   frontend: {
     direction: "Frontend Developer",
-    icon: "🎨",
-    emoji: "🖥️",
+    icon: FrontendIcon,
     color: "#16a34a",
     bgColor: "#dcfce7",
-    desc:
-      "Siz kreativ va vizual fikrlovchi insonsiz! React, CSS va zamonaviy UI/UX texnologiyalari orqali millionlab foydalanuvchi ko'radigan interfeyslar yaratishni o'rganing.",
+    strokeColor: "#166534",
+    desc: "Siz kreativ va vizual fikrlovchi insonsiz! React, CSS va zamonaviy UI/UX texnologiyalari orqali millionlab foydalanuvchi ko'radigan interfeyslar yaratishni o'rganing.",
     salary: "$800–2500/oy",
     duration: "6 oy",
   },
   backend: {
     direction: "Backend Developer",
-    icon: "⚙️",
-    emoji: "🛠️",
+    icon: BackendIcon,
     color: "#1d4ed8",
     bgColor: "#dbeafe",
-    desc:
-      "Siz mantiq va arxitektura sevuvchisiz. Node.js, Python, PostgreSQL kabi kuchli texnologiyalar bilan server tomonida ishlashni o'rganing.",
+    strokeColor: "#1e40af",
+    desc: "Siz mantiq va arxitektura sevuvchisiz. Node.js, Python, PostgreSQL kabi kuchli texnologiyalar bilan server tomonida ishlashni o'rganing.",
     salary: "$1000–3000/oy",
     duration: "8 oy",
   },
   mobile: {
     direction: "Mobile Developer",
-    icon: "📱",
-    emoji: "📲",
+    icon: MobileIcon,
     color: "#7c3aed",
     bgColor: "#f3e8ff",
-    desc:
-      "Kichik ekranda katta ta'sir! React Native yoki Flutter bilan iOS va Android ilovalar yaratishni o'rganing va app marketga chiqaring.",
+    strokeColor: "#7e22ce",
+    desc: "Kichik ekranda katta ta'sir! React Native yoki Flutter bilan iOS va Android ilovalar yaratishni o'rganing va app marketga chiqaring.",
     salary: "$900–2800/oy",
     duration: "7 oy",
   },
   data: {
     direction: "Data Scientist",
-    icon: "📊",
-    emoji: "🔬",
+    icon: DataIcon,
     color: "#0d9488",
     bgColor: "#ccfbf1",
-    desc:
-      "Ma'lumotlar — kelajak nefti! Python, Pandas va ML algoritmlar yordamida kompaniyalarga qimmatli ma'lumot bashoratlarini berishni o'rganing.",
+    strokeColor: "#0f766e",
+    desc: "Ma'lumotlar — kelajak nefti! Python, Pandas va ML algoritmlar yordamida kompaniyalarga qimmatli ma'lumot bashoratlarini berishni o'rganing.",
     salary: "$1200–3500/oy",
     duration: "8 oy",
   },
   ai: {
     direction: "AI Engineer",
-    icon: "🤖",
-    emoji: "🧠",
+    icon: AIIcon,
     color: "#b45309",
     bgColor: "#fef9c3",
-    desc:
-      "Kelajak texnologiyasi siz bilan! Sun'iy intellekt, Deep Learning va LLM modellarini o'rganib, innovatsiya sohasida yetakchi bo'ling.",
+    strokeColor: "#854d0e",
+    desc: "Kelajak texnologiyasi siz bilan! Sun'iy intellekt, Deep Learning va LLM modellarini o'rganib, innovatsiya sohasida yetakchi bo'ling.",
     salary: "$1500–5000/oy",
     duration: "10 oy",
   },
   devops: {
     direction: "DevOps Engineer",
-    icon: "🚀",
-    emoji: "☁️",
+    icon: DevOpsIcon,
     color: "#be123c",
     bgColor: "#ffe4e6",
-    desc:
-      "Infratuzilma — siz uchun. Docker, Kubernetes, CI/CD va Cloud texnologiyalari orqali tizimlarni avtomatlashtirishni o'rganing.",
+    strokeColor: "#9f1239",
+    desc: "Infratuzilma — siz uchun. Docker, Kubernetes, CI/CD va Cloud texnologiyalari orqali tizimlarni avtomatlashtirishni o'rganing.",
     salary: "$1100–3200/oy",
     duration: "6 oy",
   },
