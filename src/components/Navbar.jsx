@@ -63,7 +63,7 @@ export default function Navbar() {
               href="#signup"
               className="bg-green-600 hover:bg-green-700 text-white text-sm font-bold px-5 py-2.5 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-200"
             >
-              Bepul boshlash →
+              Bepul boshlash
             </a>
           </div>
 
