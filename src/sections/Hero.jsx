@@ -69,16 +69,16 @@ export default function Hero() {
   return (
     <section
       className="relative min-h-screen flex items-center overflow-hidden pt-16"
-      style={{
-        background:
-          "linear-gradient(160deg, #f0fdf4 0%, #dcfce7 60%, #bbf7d0 100%)",
-      }}
+      // style={{
+      //   background:
+      //     // "linear-gradient(160deg, #f0fdf4 0%, #dcfce7 60%, #bbf7d0 100%)",
+      // }}
     >
       {/* Background blobs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-green-200 rounded-full opacity-30 blur-3xl" />
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-green-400 rounded-full opacity-20 blur-3xl" />
         <div className="absolute top-1/2 -left-20 w-72 h-72 bg-emerald-100 rounded-full opacity-50 blur-2xl" />
-        <div className="absolute bottom-20 right-1/4 w-56 h-56 bg-green-100 rounded-full opacity-40 blur-2xl" />
+        <div className="absolute bottom-20 right-1/4 w-56 h-56 bg-green-200 rounded-full opacity-40 blur-2xl" />
         {/* Grid pattern */}
         <svg
           className="absolute inset-0 w-full h-full opacity-[0.04]"
@@ -103,7 +103,7 @@ export default function Hero() {
         </svg>
       </div>
 
-      <div className="relative max-w-6xl mx-auto px-5 sm:px-8 py-20 w-full flex flex-col">
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-8 py-20 w-full flex flex-col">
         <div>
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* ── Left ── */}
@@ -112,7 +112,7 @@ export default function Hero() {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.08] text-gray-900 mb-6">
                 IT kasbingizni{" "}
                 <span className="relative inline-block">
-                  <span className="text-green-600">bugundan</span>
+                  <span className="text-green-700">bugundan</span>
                   <svg
                     className="absolute -bottom-2 left-0 w-full"
                     viewBox="0 0 200 8"
@@ -159,12 +159,12 @@ export default function Hero() {
             {/* ── Right ── */}
             <div className="lg:block md:hidden relative">
               {/* Main card */}
-              <div className="bg-white rounded-3xl shadow-2xl shadow-green-200 border border-green-100 p-7 relative z-10">
+              <div className="bg-white rounded-3xl shadow-2xl shadow-green-200 border-[2px] border-green-100 p-7 relative z-10">
                 <div className="flex items-center justify-between mb-5">
                   <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">
                     Mashhur kurslar
                   </p>
-                  <span className="text-xs text-green-600 font-bold bg-green-50 px-2.5 py-1 rounded-full border border-green-100">
+                  <span className="text-xs text-green-600 font-bold bg- -50 px-2.5 py-1 rounded-full border border-green-100">
                     Jonli
                   </span>
                 </div>
@@ -224,7 +224,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-4 gap-6 pt-[50px] lg:gap-[100px]">
+        <div className="grid grid-cols-4 gap-6 pt-[50px] lg:gap-[100px] text-center">
           {[
             { n: "12K+", l: "Talabalar" },
             { n: "95%", l: "Ish topdi" },

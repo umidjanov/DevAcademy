@@ -1,6 +1,6 @@
 export default function WhyDevAcademy() {
   return (
-    <div className="max-w-screen-xl mx-auto px-5 sm:px-8">
+    <div className="max-w-screen-xl mx-auto px-5 sm:px-8 mt-[100px]">
       <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#000127] lg:p-20 lg:pb-20 px-6 py-12 sm:px-16 sm:py-20 to-[#054105] xs:pb-60">
         {/* Deco SVG — o'ng tomonda */}
         <svg

@@ -91,7 +91,7 @@ const trustItems = [
 export default function Teachers() {
   return (
     <section id="teachers" className="py-24 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-5 sm:px-8">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <SectionHeader
           tag="Bizning ustozlarimiz"
           title="Tajribali mutaxassislar"

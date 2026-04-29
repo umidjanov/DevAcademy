@@ -1,8 +1,9 @@
 export default function CourseTypeCards() {
   const cards = [
     {
-      bg: "#16a34a",
+      bg: "#0d2b17",
       title: "Kurslar",
+      href: "#courses",
       desc: "Davomiyligi qisqa va sohaning ma'lum qismini qamrab olgan kurslar. Sohadagi o'zingizda mavjud bo'shliqni to'ldiring.",
       cta: "31 ta kurs",
       icon: (
@@ -49,8 +50,9 @@ export default function CourseTypeCards() {
       ),
     },
     {
-      bg: "#14532d",
+      bg: "#111827",
       title: "Kasblar",
+      href: "#kasblar",
       desc: "Kasbga yo'naltirilgan praktikum kurslari. 0 dan boshlab ishga tayyor bo'lib chiqing.",
       cta: "14 ta kasb",
       icon: (
@@ -139,11 +141,12 @@ export default function CourseTypeCards() {
   ];
 
   return (
-    <div class="max-w-screen-xl mx-auto container-padding gap-4 grid grid-cols-1 md:grid-cols-2 md:py-5 py-16">
+    <div className="max-w-screen-xl mx-auto container-padding gap-6 grid grid-cols-1 md:grid-cols-2 md:py-5 py-16 lg:mt-[80px]">
       {cards.map((c) => (
-        <div
+        <a
           key={c.title}
-          className="relative rounded-2xl p-8 overflow-hidden flex flex-col min-h-[260px] cursor-pointer group"
+          href={c.href}
+          className="relative rounded-2xl p-8 overflow-hidden flex flex-col min-h-[260px] cursor-pointer group transition-all duration-200 hover:-translate-y-1"
           style={{ background: c.bg }}
         >
           {/* Deco bg */}
@@ -193,7 +196,7 @@ export default function CourseTypeCards() {
               </svg>
             </div>
           </div>
-        </div>
+        </a>
       ))}
     </div>
   );

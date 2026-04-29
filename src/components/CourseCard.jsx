@@ -2,7 +2,7 @@ export default function CourseCard({ course }) {
   const IconComponent = course.icon;
 
   return (
-    <div className="group relative bg-white border border-gray-100 rounded-2xl p-6 hover:border-green-200 hover:shadow-xl hover:shadow-green-50 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer overflow-hidden">
+    <div className="group relative bg-[#e9e9e922] border border-gray-100 rounded-2xl p-6 hover:border-green-200 hover:shadow-xl hover:shadow-green-50 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer overflow-hidden ">
       {/* Top accent line */}
       <div className="absolute top-0 left-0 right-0 h-0.5 bg-green-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-t-2xl" />
 

@@ -7,6 +7,7 @@ import Signup from "./sections/Signup";
 import Footer from "./sections/Footer";
 import CourseTypeCards from "./components/CourseTypeCards";
 import WhyDevAcademy from "./components/WhyDevAcademy";
+import Kasblar from "./components/Kasblar";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <CourseTypeCards />
         <Courses />
         <WhyDevAcademy />
+        <Kasblar />
         <Quiz />
         <Teachers />
         <Signup />

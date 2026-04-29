@@ -86,8 +86,8 @@ const contacts = [
 export default function Footer() {
   return (
     <footer className="bg-gray-900 border-t border-gray-800 pt-16 pb-8">
-      <div className="max-w-6xl mx-auto px-5 sm:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-14 mb-14">
 
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
@@ -99,7 +99,7 @@ export default function Footer() {
                 Dev<span className="text-green-500">Academy</span>
               </span>
             </div>
-            <p className="text-sm text-gray-400 leading-relaxed mb-5">
+            <p className="text-xm text-gray-400 leading-relaxed mb-5">
               O'zbekistonning eng yirik IT ta'lim platformasi. 2020-yildan beri 12,000+
               dasturchini tayyorladik.
             </p>
@@ -126,7 +126,7 @@ export default function Footer() {
                   <li key={l}>
                     <a
                       href="#"
-                      className="text-sm text-gray-400 hover:text-green-400 transition-colors duration-150"
+                      className="text-xm text-gray-400 hover:text-green-400 transition-colors duration-150"
                     >
                       {l}
                     </a>
@@ -143,7 +143,7 @@ export default function Footer() {
               {contacts.map((c) => (
                 <li key={c.text} className="flex items-start gap-2.5">
                   <span className="mt-0.5 flex-shrink-0">{c.icon}</span>
-                  <span className="text-sm text-gray-400 leading-snug">{c.text}</span>
+                  <span className="text-xm text-gray-400 leading-snug">{c.text}</span>
                 </li>
               ))}
             </ul>

@@ -4,8 +4,8 @@ import { courses } from "../data/courses";
 
 export default function Courses() {
   return (
-    <section id="courses" className="py-24 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-5 sm:px-8">
+    <section id="courses" className="py-24">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <SectionHeader
           tag="IT Kurslar"
           title="Kasbingizni tanlang"
