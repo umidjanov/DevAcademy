@@ -27,7 +27,7 @@ function QuizResult({ result, onRestart }) {
 
       <div className="grid grid-cols-2 gap-3 max-w-xs mx-auto mb-8">
         <div className="bg-gray-50 rounded-xl p-3 text-center border border-gray-100">
-          <p className="text-xs text-gray-400 mb-0.5">O'rtacha maosh</p>
+          <p className="text-xs text-gray-500 mb-0.5">O'rtacha maosh</p>
           <p className="text-sm font-bold text-gray-800">{result.salary}</p>
         </div>
         <div className="bg-gray-50 rounded-xl p-3 text-center border border-gray-100">
@@ -39,13 +39,13 @@ function QuizResult({ result, onRestart }) {
       <div className="flex gap-3 justify-center flex-wrap">
         <a
           href="#signup"
-          className="bg-green-600 hover:bg-green-700 text-white font-bold px-7 py-3 rounded-xl transition-all text-sm hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-200"
+          className="bg-[#0B6644] hover:bg-[#0B6644] text-white font-bold px-7 py-3 rounded-xl transition-all text-sm hover:-translate-y-0.5"
         >
           Kursga yozilish →
         </a>
         <button
           onClick={onRestart}
-          className="bg-white border-2 border-gray-200 text-gray-700 font-bold px-7 py-3 rounded-xl hover:border-green-300 hover:text-green-600 transition-all text-sm"
+          className="bg-white border-2 border-[#0B6644] text-gray-700 font-bold px-7 py-3 rounded-xl hover:text-[#0B6644] hover:bg-[#0b66450f] transition-all text-sm"
         >
           Qayta urinish
         </button>
@@ -105,7 +105,7 @@ export default function Quiz() {
           <div className="bg-white rounded-3xl shadow-xl shadow-gray-100 border border-gray-100 overflow-hidden">
             {/* Header progress */}
             {!isDone && (
-              <div className="bg-gradient-to-r from-green-700 via-green-600 to-emerald-500 p-7 text-white">
+              <div className="bg-gradient-to-r from-[#0B6644] via-green-600 to-[#0B6644] p-7 text-white">
                 <div className="flex gap-2 mb-5">
                   {quizQuestions.map((_, i) => (
                     <div
@@ -150,14 +150,14 @@ export default function Quiz() {
                           onClick={() => selectOption(opt.value)}
                           className={`flex items-center gap-4 p-4 rounded-2xl border-2 text-left transition-all duration-200 ${
                             isSelected
-                              ? "border-green-500 bg-green-50 shadow-sm shadow-green-100"
+                              ? "border-[#0B6644] bg-green-50 shadow-sm shadow-green-100"
                               : "border-gray-100 hover:border-green-200 hover:bg-green-50/50"
                           }`}
                         >
                           <div
                             className={`w-5 h-5 rounded-full border-2 flex-shrink-0 flex items-center justify-center transition-all ${
                               isSelected
-                                ? "border-green-600 bg-green-600"
+                                ? "border-[#0B6644] bg-[#0B6644]"
                                 : "border-gray-300"
                             }`}
                           >
@@ -167,7 +167,7 @@ export default function Quiz() {
                           </div>
                           <span
                             className={`text-sm font-semibold ${
-                              isSelected ? "text-green-800" : "text-gray-700"
+                              isSelected ? "text-[#0B6644]" : "text-gray-700"
                             }`}
                           >
                             {opt.text}
@@ -186,7 +186,7 @@ export default function Quiz() {
                     className={`text-sm font-bold px-5 py-2.5 rounded-xl border-2 transition-all ${
                       step === 0
                         ? "border-gray-100 text-gray-300 cursor-not-allowed"
-                        : "border-gray-200 text-gray-600 hover:border-gray-300 hover:text-gray-800"
+                        : "border-gray-200 text-gray-500 hover:border-gray-300 hover:text-gray-800"
                     }`}
                   >
                     ← Orqaga
@@ -200,7 +200,7 @@ export default function Quiz() {
                     disabled={answers[step] === undefined}
                     className={`text-sm font-bold px-6 py-2.5 rounded-xl transition-all ${
                       answers[step] !== undefined
-                        ? "bg-green-600 text-white hover:bg-green-700 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-200"
+                        ? "bg-[#0B6644] text-white hover:bg-[#0B6644] hover:-translate-y-0.5"
                         : "bg-gray-100 text-gray-300 cursor-not-allowed"
                     }`}
                   >

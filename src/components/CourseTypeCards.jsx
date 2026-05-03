@@ -1,7 +1,7 @@
 export default function CourseTypeCards() {
   const cards = [
     {
-      bg: "#0d2b17",
+      bg: "#0B6644",
       title: "Kurslar",
       href: "#courses",
       desc: "Davomiyligi qisqa va sohaning ma'lum qismini qamrab olgan kurslar. Sohadagi o'zingizda mavjud bo'shliqni to'ldiring.",
@@ -141,7 +141,7 @@ export default function CourseTypeCards() {
   ];
 
   return (
-    <div className="max-w-screen-xl mx-auto container-padding gap-6 grid grid-cols-1 md:grid-cols-2 md:py-5 py-16 lg:mt-[80px]">
+    <div className="max-w-screen-xl lg:mx-auto mx-[20px] container-padding gap-6 grid grid-cols-1 md:grid-cols-2 md:py-5 py-16 lg:mt-[80px]">
       {cards.map((c) => (
         <a
           key={c.title}

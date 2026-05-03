@@ -2,24 +2,24 @@ import TeacherAvatar from "./TeacherAvatar";
 
 export default function TeacherCard({ teacher }) {
   return (
-    <div className="group bg-white border border-gray-100 rounded-2xl p-5 hover:border-green-200 hover:shadow-xl hover:shadow-green-50 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col items-center text-center">
+    <div className="group bg-white border border-gray-100 rounded-2xl p-5 hover:border-[#0B6644] transition-all duration-300 cursor-pointer flex flex-col items-center text-center">
       {/* Avatar */}
       <div className="mb-4 transition-transform duration-300 group-hover:scale-105">
         <TeacherAvatar teacher={teacher} size={80} />
       </div>
 
       {/* Name */}
-      <h4 className="text-base font-bold text-gray-900 mb-0.5 group-hover:text-green-700 transition-colors">
+      <h4 className="text-base font-bold text-gray-900 mb-0.5 group-hover:text-[0b66450f] transition-colors">
         {teacher.name}
       </h4>
 
       {/* Field */}
-      <p className="text-xs font-semibold text-green-600 mb-1">
+      <p className="text-xs font-semibold text-[#0B6644] mb-1">
         {teacher.field}
       </p>
 
       {/* Company */}
-      <p className="text-xs text-gray-400 mb-4">
+      <p className="text-xs text-gray-500 mb-4">
         {teacher.company} · {teacher.exp}
       </p>
 
@@ -61,7 +61,7 @@ export default function TeacherCard({ teacher }) {
           >
             <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
           </svg>
-          <span className="text-xs font-bold text-gray-700">
+          <span className="text-xs font-bold text-gray-900">
             {teacher.rating}
           </span>
         </div>

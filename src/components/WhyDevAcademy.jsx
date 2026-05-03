@@ -1,7 +1,7 @@
 export default function WhyDevAcademy() {
   return (
-    <div className="max-w-screen-xl mx-auto px-5 sm:px-8 mt-[100px]">
-      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#000127] lg:p-20 lg:pb-20 px-6 py-12 sm:px-16 sm:py-20 to-[#054105] xs:pb-60">
+    <div className="max-w-screen-xl mx-auto px-5 sm:px-8">
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#000127] lg:p-20 lg:pb-20 px-6 py-12 sm:px-16 sm:py-20 to-[#073e2a] xs:pb-60">
         {/* Deco SVG — o'ng tomonda */}
         <svg
           className="absolute right-0 top-0 bottom-0 h-full pointer-events-none"
@@ -89,22 +89,21 @@ export default function WhyDevAcademy() {
         <div className="relative z-10">
           <p
             className="text-xm font-black uppercase tracking-widest mb-3"
-            style={{ color: "#4ade80", letterSpacing: "0.1em" }}
+            style={{ color: "#4ade90", letterSpacing: "0.1em" }}
           >
             DevAcademy jamoasi
           </p>
           <h2
-            className="text-2xl sm:text-3xl font-black text-white leading-snug mb-6"
+            className="text-2xl lg:text-4xl sm:text-3xl font-black text-white leading-snug mb-6"
             style={{ maxWidth: 420 }}
           >
-            Nima uchun <span style={{ color: "#4ade80" }}>DevAcademy</span>da{" "}
-            o'qish kerak?
+            Nima uchun DevAcademyda o'qish kerak?
           </h2>
 
           <a
             href="#about"
             className="inline-flex items-center gap-2 font-bold text-sm px-5 py-2.5 rounded-xl transition-all hover:-translate-y-0.5"
-            style={{ background: "#16a34a", color: "#fff" }}
+            style={{ background: "#0B6644", color: "#fff" }}
           >
             <svg
               width="20"

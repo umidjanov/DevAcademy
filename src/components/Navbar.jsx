@@ -21,66 +21,51 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#111827f8] shadow-sm border-b border-gray-100"
+          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100"
           : "bg-transparent border-b border-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-18">
-
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white font-black text-sm">
+            <div className="w-9 h-9 bg-[#0B6644] rounded-xl flex items-center justify-center text-white font-black text-sm">
               DA
             </div>
-            <span
-              className={`font-black text-xl tracking-tight transition-colors duration-300 ${
-                scrolled ? "text-white" : "text-gray-900"
-              }`}
-            >
-              Dev<span className="text-green-500">Academy</span>
+            <span className="font-black text-xl tracking-tight text-gray-900">
+              Dev<span className="text-[#0B6644]">Academy</span>
             </span>
           </a>
 
-          {/* Desktop nav */}
-          <ul className="hidden md:flex items-center gap-8">
-            {navLinks.map((l) => (
-              <li key={l.label}>
-                <a
-                  href={l.href}
-                  className={`text-sm font-semibold transition-colors duration-150 hover:text-green-400 ${
-                    scrolled ? "text-gray-300" : "text-gray-600"
-                  }`}
-                >
-                  {l.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className="flex items-center gap-10">
+            {/* Desktop nav */}
+            <ul className="hidden md:flex items-center gap-8">
+              {navLinks.map((l) => (
+                <li key={l.label}>
+                  <a
+                    href={l.href}
+                    className="text-sm font-semibold text-gray-900 hover:text-[#0B6644] transition-colors duration-150"
+                  >
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
 
-          {/* CTA buttons */}
-          <div className="hidden md:flex items-center gap-3">
-            <a
-              href="#"
-              className={`text-sm font-semibold transition-colors px-4 py-2 hover:text-green-400 ${
-                scrolled ? "text-gray-300" : "text-gray-700"
-              }`}
-            >
-              Kirish
-            </a>
-            <a
-              href="#signup"
-              className="bg-green-600 hover:bg-green-700 text-white text-sm font-bold px-5 py-2.5 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-900"
-            >
-              Bepul boshlash
-            </a>
+            {/* CTA */}
+            <div className="hidden md:flex items-center gap-3">
+              <a
+                href="#signup"
+                className="hover:bg-[#0b66450f] text-[#0B6644] border-[2px] border-[#0B6644] text-sm font-bold px-5 py-2.5 rounded-xl transition-all duration-200"
+              >
+                Bepul boshlash
+              </a>
+            </div>
           </div>
 
           {/* Hamburger */}
           <button
-            className={`md:hidden flex flex-col gap-1.5 p-2 rounded-lg transition-colors ${
-              scrolled ? "hover:bg-gray-800" : "hover:bg-gray-100"
-            }`}
+            className="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-gray-100 transition-colors"
             onClick={() => setMenuOpen((o) => !o)}
             aria-label="Menu"
           >
@@ -91,9 +76,7 @@ export default function Navbar() {
             ].map((cls, i) => (
               <span
                 key={i}
-                className={`block w-5 h-0.5 rounded transition-all duration-300 ${cls} ${
-                  scrolled ? "bg-gray-300" : "bg-gray-700"
-                }`}
+                className={`block w-5 h-0.5 bg-gray-900 rounded transition-all duration-300 ${cls}`}
               />
             ))}
           </button>
@@ -102,12 +85,8 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 border-t ${
+        className={`md:hidden overflow-hidden transition-all duration-300 bg-white border-t border-gray-100 ${
           menuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
-        } ${
-          scrolled
-            ? "bg-gray-900 border-gray-800"
-            : "bg-white border-gray-100"
         }`}
       >
         <div className="px-5 py-4 flex flex-col gap-1">
@@ -115,11 +94,7 @@ export default function Navbar() {
             <a
               key={l.label}
               href={l.href}
-              className={`text-sm font-semibold py-3 border-b transition-colors hover:text-green-400 ${
-                scrolled
-                  ? "text-gray-300 border-gray-800"
-                  : "text-gray-700 border-gray-50"
-              }`}
+              className="text-sm font-semibold text-gray-900 py-3 border-b border-gray-50 hover:text-[#0B6644] transition-colors"
               onClick={() => setMenuOpen(false)}
             >
               {l.label}
@@ -127,7 +102,7 @@ export default function Navbar() {
           ))}
           <a
             href="#signup"
-            className="mt-3 bg-green-600 text-white text-sm font-bold px-5 py-3 rounded-xl text-center transition-all hover:bg-green-700"
+            className="mt-3 bg-[#0B6644] text-white text-sm font-bold px-5 py-3 rounded-xl text-center hover:bg-[#0b6645e3] transition-all"
             onClick={() => setMenuOpen(false)}
           >
             Bepul boshlash →

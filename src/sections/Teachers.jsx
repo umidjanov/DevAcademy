@@ -109,7 +109,7 @@ export default function Teachers() {
           {trustItems.map((item) => (
             <div
               key={item.label}
-              className="bg-white rounded-2xl p-5 text-center border border-gray-100 hover:border-green-200 transition-colors"
+              className="bg-white rounded-2xl p-5 text-center border border-gray-100 hover:border-[#0B6644] transition-colors"
             >
               <div
                 className="w-10 h-10 rounded-xl flex items-center justify-center mx-auto mb-3"

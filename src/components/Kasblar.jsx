@@ -472,9 +472,8 @@ export default function Kasblar() {
               style={
                 active === f.value
                   ? {
-                      background: "#16a34a",
+                      background: "#0B6644",
                       color: "#fff",
-                      border: "1.5px solid #16a34a",
                     }
                   : {
                       background: "transparent",

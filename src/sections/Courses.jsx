@@ -21,10 +21,9 @@ export default function Courses() {
         <div className="text-center mt-12">
           <a
             href="#"
-            className="inline-flex items-center gap-2 bg-white border-2 border-green-400 text-green-700 font-bold px-8 py-3.5 rounded-xl hover:bg-green-50 hover:border-green-300 transition-all duration-200 text-sm"
+            className="inline-flex items-center justify-center gap-2 bg-white border-2 border-[#0B6644] text-[#0B6644] font-bold px-8 py-3.5 rounded-xl hover:bg-[#0b66450f] transition-all duration-200 text-sm"
           >
             Barcha kurslarni ko'rish
-            <span>→</span>
           </a>
         </div>
       </div>

@@ -83,7 +83,7 @@ function InputField({
     <div>
       <label
         htmlFor={id}
-        className="block text-sm font-semibold text-gray-300 mb-2"
+        className="block text-sm font-semibold text-gray-500 mb-2"
       >
         {label}
       </label>
@@ -93,8 +93,8 @@ function InputField({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className={`w-full bg-gray-700 border-2 rounded-xl px-4 py-3.5 text-sm text-white placeholder-gray-400 outline-none transition-all duration-200 focus:border-green-500 ${
-          error ? "border-red-500" : "border-gray-600"
+        className={`w-full bg-gray-700 border-2 rounded-xl px-4 py-3.5 text-sm text-white placeholder-gray-400 outline-none transition-all duration-200 focus:border-[#0B6644] ${
+          error ? "border-red-500" : "border-gray-500"
         }`}
       />
       {error && <p className="mt-1.5 text-xs text-red-400">{error}</p>}
@@ -145,7 +145,7 @@ export default function Signup() {
           {/* Left */}
           <div>
             {/* Tag */}
-            <span className="inline-flex items-center gap-2 bg-green-900/50 text-green-400 border border-green-800 text-xs font-bold px-4 py-1.5 rounded-full mb-5 tracking-wide">
+            <span className="inline-flex items-center gap-2 bg-[#0B6644] text-[white] border border-[#0B6644] text-xs font-bold px-4 py-1.5 rounded-full mb-5 tracking-wide">
               <svg
                 width="13"
                 height="13"
@@ -164,9 +164,9 @@ export default function Signup() {
 
             <h2 className="text-3xl sm:text-4xl font-black text-white leading-tight mb-5">
               Bugun boshlash uchun{" "}
-              <span className="text-green-400">ro'yxatdan o'ting</span>
+              <span className="text-[#0B6644]">ro'yxatdan o'ting</span>
             </h2>
-            <p className="text-gray-400 text-base leading-relaxed mb-8">
+            <p className="text-gray-500 text-base leading-relaxed mb-8">
               Birinchi dars <span className="text-white font-bold">bepul!</span>{" "}
               30 daqiqa ichida qo'ng'iroq qilamiz va sizga mos kursni tavsiya
               etamiz.
@@ -176,7 +176,7 @@ export default function Signup() {
             <div className="space-y-5">
               {PERKS.map((p) => (
                 <div key={p.title} className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-gray-800 border border-gray-700 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-gray-900 flex items-center justify-center flex-shrink-0">
                     {p.icon}
                   </div>
                   <div>
@@ -225,7 +225,7 @@ export default function Signup() {
             {submitted ? (
               <div className="text-center py-8">
                 {/* Success icon */}
-                <div className="w-20 h-20 rounded-full bg-green-900/50 border border-green-800 flex items-center justify-center mx-auto mb-5">
+                <div className="w-20 h-20 rounded-full bg-green-900/50 border border-[#0B6644] flex items-center justify-center mx-auto mb-5">
                   <svg
                     width="36"
                     height="36"
@@ -248,7 +248,7 @@ export default function Signup() {
                   <span className="text-white font-semibold">{form.phone}</span>{" "}
                   raqamiga qo'ng'iroq qilamiz.
                 </p>
-                <div className="bg-green-900/40 border border-green-800 rounded-2xl p-4 flex items-center gap-3">
+                <div className="bg-[#0B6644] border border-[#0B6644] rounded-2xl p-4 flex items-center gap-3">
                   <svg
                     width="18"
                     height="18"
@@ -261,7 +261,7 @@ export default function Signup() {
                   >
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
-                  <p className="text-green-400 text-sm font-semibold text-left">
+                  <p className="text-white text-sm font-semibold text-left">
                     Birinchi dars bepul va hozirdan boshlash mumkin!
                   </p>
                 </div>
@@ -303,7 +303,7 @@ export default function Signup() {
                   <button
                     onClick={handleSubmit}
                     disabled={loading}
-                    className="w-full bg-green-600 hover:bg-green-500 text-white font-black py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-green-900 text-sm disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full bg-[#0B6644] hover:bg-[#0B6644] text-white font-black py-4 rounded-xl transition-all duration-200 text-sm disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {loading ? (
                       <>

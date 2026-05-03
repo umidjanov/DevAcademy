@@ -92,11 +92,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white font-black text-sm">
+              <div className="w-8 h-8 bg-[#0B6644] rounded-lg flex items-center justify-center text-white font-black text-sm">
                 DA
               </div>
               <span className="font-black text-xl text-white">
-                Dev<span className="text-green-500">Academy</span>
+                Dev<span className="text-[#0B6644]">Academy</span>
               </span>
             </div>
             <p className="text-xm text-gray-400 leading-relaxed mb-5">
@@ -109,7 +109,7 @@ export default function Footer() {
                   key={s.label}
                   href="#"
                   aria-label={s.label}
-                  className="w-9 h-9 bg-gray-800 border border-gray-700 rounded-xl flex items-center justify-center text-gray-400 hover:text-green-400 hover:bg-green-900/40 hover:border-green-700 transition-all"
+                  className="w-9 h-9 bg-gray-800 rounded-xl flex items-center justify-center text-gray-400 hover:text-green-400 hover:bg-green-900/40 hover:border-green-700 transition-all"
                 >
                   {s.icon}
                 </a>
@@ -120,13 +120,13 @@ export default function Footer() {
           {/* Links */}
           {Object.entries(footerLinks).map(([section, links]) => (
             <div key={section}>
-              <h4 className="text-sm font-bold text-white mb-4 tracking-wide">{section}</h4>
+              <h4 className="text-xm font-bold text-white mb-4 tracking-wide">{section}</h4>
               <ul className="space-y-2.5">
                 {links.map((l) => (
                   <li key={l}>
                     <a
                       href="#"
-                      className="text-xm text-gray-400 hover:text-green-400 transition-colors duration-150"
+                      className="text-xm text-gray-400 hover:text-[#ffff] transition-colors duration-150"
                     >
                       {l}
                     </a>
@@ -138,7 +138,7 @@ export default function Footer() {
 
           {/* Contacts */}
           <div>
-            <h4 className="text-sm font-bold text-white mb-4 tracking-wide">Aloqa</h4>
+            <h4 className="text-xm font-bold text-white mb-4 tracking-wide">Aloqa</h4>
             <ul className="space-y-3">
               {contacts.map((c) => (
                 <li key={c.text} className="flex items-start gap-2.5">
